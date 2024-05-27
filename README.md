@@ -4,7 +4,7 @@ This repository contains code for building and evaluating an Artificial Neural N
 
 ## Dataset
 
-The dataset used for training and evaluation is stored in a CSV file named `sample.csv`. It includes features such as length-width ratio, stem height, number of leaves, and angle of leaf, along with the corresponding species label.
+The dataset used for training and evaluation is stored in a CSV file named `sample_classifier.csv`. It includes features such as length-width ratio, stem height, number of leaves, and angle of leaf, along with the corresponding species label.
 
 ## Preprocessing
 
