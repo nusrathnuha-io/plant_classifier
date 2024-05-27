@@ -1,21 +1,33 @@
-#Neural Network Classifier with Hyperparameter Tuning and K-Fold Cross-Validation
+# ANN Species Classifier
 
-This project demonstrates how to build and optimize a neural network classifier using Keras and scikit-learn. We employ hyperparameter tuning with grid search and k-fold cross-validation to enhance model performance. The final model is trained on the entire dataset using the best hyperparameters identified during the tuning process.
+This repository contains code for building and evaluating an Artificial Neural Network (ANN) classifier for species classification based on provided features. The classifier is developed using TensorFlow and Keras libraries in Python.
 
-Overview
-Model Architecture: Defined using Keras Sequential API.
-Hyperparameter Tuning: Performed using GridSearchCV from scikit-learn.
-Cross-Validation: Utilized K-fold cross-validation to ensure robust model evaluation.
-Visualization: Plotted training and validation accuracy for each fold to monitor performance.
+## Dataset
+
+The dataset used for training and evaluation is stored in a CSV file named `sample.csv`. It includes features such as length-width ratio, stem height, number of leaves, and angle of leaf, along with the corresponding species label.
+
+## Preprocessing
+
+- The dataset is loaded into a Pandas DataFrame.
+- Categorical columns are encoded using LabelEncoder.
+- Features are normalized using StandardScaler.
+- The dataset is split into training and testing sets using K-cross validation.
+
+## Model Architecture
+
+The neural network model consists of multiple Dense layers with ReLU activation functions. Dropout layers are incorporated for regularization to prevent overfitting. The output layer uses the softmax activation function for multiclass classification.
+
+## Training
+
+The model is trained using the Adam optimizer with categorical cross-entropy loss. An early stopping callback is implemented to prevent overfitting. Training progress is monitored using a validation split.
+
+## Evaluation
+
+The trained model is evaluated on both training and testing sets. Metrics such as loss and accuracy are computed and printed. A classification report and confusion matrix are generated to assess model performance.
 
 
+## Results
 
-
-
-
-Results
-Average Test Accuracy: Achieved high average test accuracy through k-fold cross-validation and hyperparameter tuning.
-Best Hyperparameters: Identified optimal hyperparameters for model training.
-Visualization: Plotted training and validation accuracy for each fold to monitor performance.
-Conclusion
-This project demonstrates an effective approach to building and optimizing a neural network classifier using hyperparameter tuning and k-fold cross-validation. By systematically searching through a range of hyperparameters and leveraging cross-validation, we achieve robust and reliable model performance.
+- The model achieves an accuracy of approximately 98.8%.
+- The classification report and confusion matrix provide insights into the model's performance across different classes.
+- Further analysis and optimization can be performed to enhance the model's accuracy and generalization capabilities.
